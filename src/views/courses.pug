@@ -1,0 +1,19 @@
+extends layouts/page.pug
+
+block content
+  form.input-group(role = 'form' method = 'GET' action = '/courses')
+    input.form-control.rounded(type = 'search', name = 'term', value = term)
+    input.btn.btn-outline-primary(type = 'submit' value = 'search')
+
+    table(style="border: 2px solid #333; border-collapse: collapse;")    
+        thead
+            tr
+                th(style="border: 1px solid #666; padding: 8px;") Course ID
+                th(style="border: 1px solid #666; padding: 8px;") Course Name
+                th(style="border: 1px solid #666; padding: 8px;") Description
+        tbody
+            each course in courses   
+                tr
+                    td(style="border: 1px solid #ccc; padding: 8px;")= course.id
+                    td(style="border: 1px solid #ccc; padding: 8px;")= course.name
+                    td(style="border: 1px solid #ccc; padding: 8px;")= course.description || 'No description'

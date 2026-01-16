@@ -4,15 +4,70 @@ html(lang="en")
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title My Site
+    style.
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      
+      header {
+        text-align: center;
+        padding: 20px;
+        background: #4a6fa5;
+        color: white;
+      }
+      
+      nav {
+        margin: 15px 0;
+      }
+      
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        background: rgba(255,255,255,0.2);
+      }
+      
+      nav a:hover {
+        background: rgba(255,255,255,0.3);
+      }
+      
+      main {
+        flex: 1;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #ecc1c1ff;
+        color: white;
+        margin-top: auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      
 
   body
     header
       h1 Мой сайт
       nav
         a(href="/") Главная
+        a(href="/courses") Курсы
 
     main
       block content
 
     footer
-      a(href='https://github.com/EgorDanilov95') My GitHub
+      p
+        a(href='https://github.com/EgorDanilov95') Мой GitHub
+      

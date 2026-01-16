@@ -1,0 +1,14 @@
+html
+  body
+    form(action = '/courses', method = 'post')
+      div
+        label ID:
+          input(type = 'text', name = 'id')
+      div
+        label Name:
+          input(type = 'text', name = 'name', required = true)
+      div
+        label Description:
+          input(type = 'text', name = 'description', required = true)
+      div
+      input(type = 'submit', value = 'Добавить новый курс')
